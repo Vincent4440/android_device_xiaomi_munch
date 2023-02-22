@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-23 The Voltage Project
+# Copyright (C) 2022-23 The DerpFest Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,18 +8,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Voltage stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+# Inherit some common derp stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit from device makefile
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
-VOLTAGE_BUILD_TYPE := OFFICIAL
 
-# Bootanimation Resolution
+# derpfest flags
 TARGET_BOOT_ANIMATION_RES := 2160
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_QUICK_TAP := true
 
-PRODUCT_NAME := voltage_munch
+PRODUCT_NAME := derp_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO

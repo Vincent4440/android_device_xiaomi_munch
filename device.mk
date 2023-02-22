@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-23 The VoltageOS Project
+# Copyright (C) 2022-23 The DerpFest Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -15,7 +15,7 @@ $(call inherit-product, vendor/xiaomi/munch-miuicamera/products/miuicamera.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-voltage
+    $(LOCAL_PATH)/overlay-derp
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal

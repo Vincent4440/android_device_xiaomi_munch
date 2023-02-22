@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-23 The VoltageOS Project
+# Copyright (C) 2022-23 The DerpFest Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,6 +9,13 @@ include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 
 # Inherit from proprietary files for miuicamera
 include vendor/xiaomi/munch-miuicamera/products/board.mk
+
+# Inherit some common derpfest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+
+# Firmware
+-include vendor/xiaomi/munch-firmware/BoardConfigVendor.mk
+
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 DEVICE_PATH := device/xiaomi/munch
