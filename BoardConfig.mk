@@ -10,9 +10,6 @@ include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 # Inherit from proprietary files for miuicamera
 include vendor/xiaomi/munch-miuicamera/products/board.mk
 
-# Inherit some common derpfest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
-
 # Firmware
 -include vendor/xiaomi/munch-firmware/BoardConfigVendor.mk
 
