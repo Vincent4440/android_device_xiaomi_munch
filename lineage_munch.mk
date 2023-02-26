@@ -14,6 +14,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from device makefile
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
+# Include GMS by default, but rely on environment variable just in case we don't want to build with GMS conditionally
+ifneq ($(NO_GMS),true)
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+endif
+
 TARGET_SUPPORTS_CALL_RECORDING := true
 
 PRODUCT_NAME := lineage_munch
